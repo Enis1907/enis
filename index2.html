@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FENERBAHÇE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b7b7b7;
+        }
+
+        header {
+            background-color: #223edb;
+            color: rgb(238, 244, 77);
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            max-width: 10%;
+            height: auto;
+            margin: 5px auto;
+            display: block;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        .container > section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #3333f2;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        #sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        #sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            z-index: 1000;
+        }
+
+        .social-links {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .social-icon {
+            font-size: 30px;
+            color: #fefe2f;
+            margin: 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            color: #007bff;
+        }
+
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            #sidebar a {
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 24px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header img {
+                width: 120px; /* Küçük ekranlar için ayarlandı */
+            }
+
+            #sidebar {
+                width: 100%;
+                left: -100%;
+            }
+
+            #sidebar a {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            span {
+                font-size: 24px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            section {
+                margin: 5px; /* Küçük ekranlar için margin azaltıldı */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="social-links">
+        <a href="https://instagram.com/enisklvz" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram social-icon"></i>
+        </a>
+        <a href="https://wa.me/05071464785" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp social-icon"></i>
+        </a>
+    </div>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Kapat">&times;</a>
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+
+    <span onclick="openNav()" aria-label="Menüyü Aç">&#9776; Menü</span>
+
+    <header>
+        <h1>FENERBAHÇE</h1>
+        <a href="https://www.fenerbahce.org/">
+            <img src="20210127193236!Fenerbahçe_SK.png" alt="Başlık Resmi">
+        </a>
+    </header>
+
+    <div class="container">
+        <section id="anasayfa">
+            <h2><a href="https://www.transfermarkt.com.tr/fenerbahce/startseite/verein/36" target="_blank">FENERBAHÇE KADROSU</a></h2>
+        </section>
+
+        <section id="hakkimizda">
+            <h2>GENEL TAKIM BİLGİLERİ</h2>
+            <p>Fenerbahçe Spor Kulübü</p>
+            <div id="iframe-container" style="margin-top: 20px;">
+                <iframe src="https://footystats.org/tr/api/club?id=105" height="420" width="100%" style="border: none;"></iframe>
+            </div>
+        </section>
+
+        <section id="iletisim">
+            <h2>İletişim</h2>
+            <p>Bize ulaşmak için aşağıdaki formu kullanabilirsiniz:</p>
+            <form>
+                <label for="ad">Ad:</label>
+                <input type="text" id="ad" name="ad" required>
+                
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+                
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FENERBAHÇE. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>
